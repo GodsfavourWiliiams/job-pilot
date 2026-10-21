@@ -1,0 +1,185 @@
+{
+  "version": 1,
+  "sources": {
+    "himalayas": {
+      "enabled": true,
+      "name": "Himalayas",
+      "homepage": "https://himalayas.app",
+      "searchEndpoint": "https://himalayas.app/jobs/api/search",
+      "sort": "recent",
+      "pagesPerQuery": 5
+    },
+    "remotive": {
+      "enabled": true,
+      "name": "Remotive",
+      "homepage": "https://remotive.com",
+      "endpoint": "https://remotive.com/api/remote-jobs",
+      "category": "software-dev",
+      "limit": 250
+    },
+    "jobicy": {
+      "enabled": true,
+      "name": "Jobicy",
+      "homepage": "https://jobicy.com",
+      "endpoint": "https://jobicy.com/api/jobs",
+      "industry": "engineering",
+      "count": 200,
+      "maxPages": 5
+    },
+    "remoteok": {
+      "enabled": true,
+      "name": "Remote OK",
+      "homepage": "https://remoteok.com",
+      "endpoint": "https://remoteok.com/api"
+    },
+    "greenhouse": {
+      "enabled": true,
+      "name": "Greenhouse company boards",
+      "homepage": "https://www.greenhouse.com",
+      "apiBase": "https://boards-api.greenhouse.io/v1/boards",
+      "boards": [
+        { "token": "canonicaljobs", "company": "Canonical" },
+        { "token": "gitlab", "company": "GitLab" },
+        { "token": "remotecom", "company": "Remote" },
+        { "token": "moniepoint", "company": "Moniepoint" }
+      ]
+    },
+    "google": {
+      "enabled": true,
+      "name": "Google web search",
+      "homepage": "https://www.google.com/search",
+      "searchEndpoint": "https://www.google.com/search",
+      "maxQueries": 7,
+      "maxPages": 20
+    },
+    "arbeitnow": {
+      "enabled": true,
+      "name": "Arbeitnow",
+      "homepage": "https://www.arbeitnow.com",
+      "endpoint": "https://www.arbeitnow.com/api/job-board-api",
+      "maxPages": 3
+    },
+    "weworkremotely": {
+      "enabled": true,
+      "name": "We Work Remotely",
+      "homepage": "https://weworkremotely.com",
+      "feeds": [
+        "https://weworkremotely.com/categories/remote-front-end-programming-jobs.rss",
+        "https://weworkremotely.com/categories/remote-full-stack-programming-jobs.rss",
+        "https://weworkremotely.com/categories/remote-programming-jobs.rss"
+      ]
+    },
+    "themuse": {
+      "enabled": true,
+      "name": "The Muse",
+      "homepage": "https://www.themuse.com",
+      "endpoint": "https://www.themuse.com/api/public/jobs",
+      "location": "Flexible / Remote",
+      "maxPages": 10
+    },
+    "remotejobs": {
+      "enabled": true,
+      "name": "RemoteJobs.org",
+      "homepage": "https://remotejobs.org",
+      "endpoint": "https://remotejobs.org/api/v1/jobs",
+      "maxQueries": 5,
+      "pagesPerQuery": 3,
+      "pageSize": 50
+    },
+    "linkedin": {
+      "enabled": true,
+      "name": "LinkedIn public jobs",
+      "homepage": "https://www.linkedin.com/jobs/",
+      "searchEndpoint": "https://www.linkedin.com/jobs/search/",
+      "locations": ["Nigeria", "Worldwide"],
+      "maxQueries": 4,
+      "maxPages": 20
+    },
+    "bluesky": {
+      "enabled": true,
+      "name": "Bluesky job posts",
+      "homepage": "https://bsky.app",
+      "searchEndpoint": "https://public.api.bsky.app/xrpc/app.bsky.feed.searchPosts",
+      "maxQueries": 4,
+      "postsPerQuery": 100,
+      "maxLinkedPages": 20
+    },
+    "xposts": {
+      "enabled": true,
+      "name": "X hiring posts",
+      "homepage": "https://x.com/search",
+      "searchEndpoint": "https://api.x.com/2/tweets/search/recent",
+      "maxQueries": 4,
+      "postsPerQuery": 100,
+      "maxLinkedPages": 20
+    }
+  },
+  "roles": {
+    "queries": [
+      "frontend engineer",
+      "frontend developer",
+      "front end developer",
+      "javascript developer",
+      "react developer",
+      "next.js developer",
+      "software engineer",
+      "full stack engineer"
+    ],
+    "focuses": {
+      "frontend": {
+        "aliases": ["frontend", "front end", "front-end", "react", "next.js", "ui"],
+        "baseQueries": ["frontend", "front end", "ui engineer"],
+        "cvSkillQueries": {
+          "react": ["react developer", "react engineer"],
+          "next.js": ["next.js developer"],
+          "javascript": ["javascript developer"]
+        }
+      }
+    },
+    "levelTerms": {
+      "intern": ["intern", "internship", "trainee"],
+      "entry": ["entry", "graduate"],
+      "junior": ["junior", "jr"],
+      "mid": ["mid", "intermediate"],
+      "senior": ["senior", "sr", "staff", "principal", "lead", "manager", "director", "head", "architect", "vp", "chief", "executive"]
+    }
+  },
+  "location": {
+    "worldwideTerms": ["worldwide", "global", "anywhere in the world", "no restriction"],
+    "countryAliases": {
+      "nigeria": ["Nigeria", "NG", "Africa", "EMEA"]
+    },
+    "utcOffsetMinutesByCountry": {
+      "nigeria": 60
+    }
+  },
+  "schedule": {
+    "checkEveryMinutes": 1,
+    "sourceCooldownMinutes": {
+      "himalayas": 1440,
+      "remotive": 360,
+      "jobicy": 10,
+      "remoteok": 10,
+      "greenhouse": 30,
+      "google": 60,
+      "arbeitnow": 10,
+      "weworkremotely": 10,
+      "themuse": 60,
+      "remotejobs": 10,
+      "linkedin": 60,
+      "bluesky": 30,
+      "xposts": 60
+    }
+  },
+  "defaults": {
+    "acceptedLevels": [],
+    "employment": ["Full time", "Part time", "Contract"],
+    "reviewBeforeEmail": true,
+    "autoScan": true,
+    "scanIntervalMinutes": 30,
+    "disabledSources": [],
+    "maxEmailsPerDay": 5,
+    "minScore": 35,
+    "browserNotifications": true
+  }
+}

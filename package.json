@@ -1,0 +1,26 @@
+{
+  "name": "job-pilot",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --webpack -H 127.0.0.1",
+    "build": "next build --webpack",
+    "start": "next start -H 127.0.0.1",
+    "background:install": "node scripts/background.mjs install",
+    "background:uninstall": "node scripts/background.mjs uninstall",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "next": "16.3.5",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "pdf-lib": "1.17.1"
+  },
+  "devDependencies": {
+    "@types/node": "26.0.0",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "typescript": "6.0.3"
+  }
+}
